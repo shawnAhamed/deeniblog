@@ -170,7 +170,7 @@
 
 
 
-.root{
+.latest_article{
   display:flex !important;
   border:none !important;
   box-shadow:none !important;
@@ -188,7 +188,7 @@
 }
 .content {
   flex: 1 0 auto;
-  padding:16px;
+  padding:0;
   padding-left:16px;
 }
 .cover{
@@ -196,6 +196,26 @@
 }
 
 
+/*featured blog*/
+
+.root{
+  display:flex ;
+  border:none !important;
+  box-shadow:none !important;
+  margin-top:20px !important;
+  background-color:#FAFAFA !important;
+  border-radius:0 !important;
+}
+.details{
+  display:flex;
+  flex-direction:column;
+}
+.content{
+  flex: 1 0 auto;
+}
+.cover{
+  width: 151px;
+}
 
 
 

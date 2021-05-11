@@ -11,42 +11,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import Link from 'next/link'
 
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-        display: 'flex',
-        border:'none',
-        boxShadow:'none',
-        marginTop:20,
-        backgroundColor:'#FAFAFA',
-        borderRadius:'0',
-    },
-    details: {
-        display: 'flex',
-        flexDirection: 'column',
-    },
-    content: {
-        flex: '1 0 auto',
-    },
-    cover: {
-        width: 151,
-    },
-    controls: {
-        display: 'flex',
-        alignItems: 'center',
-        paddingLeft: theme.spacing(1),
-        paddingBottom: theme.spacing(1),
-    },
-    playIcon: {
-        height: 38,
-        width: 38,
-    },
-}));
 
 export default function Homeblog(props) {
     const articles =props.articles;
     const featured_article =props.featured_article;
-
-    const classes = useStyles();
     return (
         <>
             <div className={styles.section_gap}/>
@@ -65,7 +33,7 @@ export default function Homeblog(props) {
                                 featured_article && featured_article.length && featured_article.map((data,i)=>{
 
                                     return(
-                                        <Card className={classes.root} key={i}>
+                                        <Card className={styles.root} key={i}>
                                             <Grid container spacing={2}>
                                                 <Grid item xs={12} md={3}>
                                                     <Typography variant="body2" className={styles.postdate} >
@@ -81,8 +49,8 @@ export default function Homeblog(props) {
                                                     </CardMedia>
                                                 </Grid>
                                                 <Grid item xs={12} md={9}>
-                                                    <div className={classes.details}>
-                                                        <CardContent className={classes.content}>
+                                                    <div className={styles.details}>
+                                                        <CardContent className={styles.content}>
                                                             <Link href={`/article/${data.slug}`}><a>
                                                             <Typography component="h5" variant="h5">
                                                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i

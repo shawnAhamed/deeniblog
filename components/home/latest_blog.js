@@ -24,7 +24,7 @@ export default function LetestBLog(props) {
             {
                 articledata && articledata.length && articledata.map((data,i)=>{
                     return(
-                        <Card className={styles.root} key={i}>
+                        <Card className={styles.latest_article} key={i}>
                             <CardMedia>
                                 <Image
                                     src={data.image}
